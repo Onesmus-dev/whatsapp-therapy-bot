@@ -1,0 +1,15 @@
+node_modules/
+.git/
+.dockerignore
+Dockerfile
+.env*
+logs/
+*.log
+tmp/
+dist/
+build/
+coverage/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
