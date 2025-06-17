@@ -13,10 +13,13 @@ services:
   whatsapp-bot:
     build: .
     volumes:
+      - ./bot:/app/bot
       - ./session:/app/session
+    working_dir: /app/bot
+    command: npx nodemon index.js
     depends_on:
       - n8n
-    network_mode: service:n8n  # share network with n8n so it can access localhost:n8n
+    network_mode: service:n8n
     environment:
       - NODE_ENV=production
 

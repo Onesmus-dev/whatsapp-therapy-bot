@@ -1,0 +1,13 @@
+2025/06/17-10:41:00.353 38 Reusing MANIFEST /app/bot/tokens/therapy-session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/06/17-10:41:00.380 38 Recovering log #296
+2025/06/17-10:41:00.519 38 Reusing old log /app/bot/tokens/therapy-session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000296.log 
+2025/06/17-10:41:09.738 45 Level-0 table #301: started
+2025/06/17-10:41:19.289 45 Level-0 table #301: 802223 bytes OK
+2025/06/17-10:41:19.329 45 Delete type=0 #296
+2025/06/17-10:41:19.339 39 Manual compaction at level-0 from '\x00]\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00^\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/06/17-10:41:27.753 3f Compacting 1@1 + 1@2 files
+2025/06/17-10:41:47.141 3f Generated table #302@1: 47893 keys, 2021258 bytes
+2025/06/17-10:41:47.145 3f Compacted 1@1 + 1@2 files => 2021258 bytes
+2025/06/17-10:41:47.153 3f compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/06/17-10:41:47.178 3f Delete type=2 #298
+2025/06/17-10:41:47.179 3f Delete type=2 #301
