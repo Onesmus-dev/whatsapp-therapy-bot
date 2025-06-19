@@ -1,6 +1,18 @@
 version: '3.8'
 
 services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: nursebot
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: therapydb
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
   n8n:
     image: n8nio/n8n
     ports:
@@ -10,6 +22,8 @@ services:
       - COHERE_API_KEY=${COHERE_API_KEY}
     volumes:
       - n8n_data:/home/node/.n8n
+    depends_on:
+      - db
 
   whatsapp-bot:
     build: .
@@ -20,9 +34,16 @@ services:
     command: npx nodemon index.js
     depends_on:
       - n8n
-    network_mode: service:n8n
+      - db
     environment:
       - NODE_ENV=production
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=nursebot
+      - DB_PASSWORD=secret
+      - DB_NAME=therapydb
+    network_mode: service:n8n
 
 volumes:
   n8n_data:
+  db_data:
